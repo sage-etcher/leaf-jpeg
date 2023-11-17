@@ -1,0 +1,184 @@
+10/31/2023 15:11 Sage I. Hendricks <sage.message@email.com>
+
+    Changed License owner to own account.
+
+    * README.md: changed license owner
+    * VERSION: changed license owner
+    * Makefile: changed license owner
+    * source/example/*: changed license owner
+    * source/template/*: changed license owner
+
+10/31/2023 14:08 Sage I. Hendricks <sage.message@email.com>
+
+	Previous two patches have failed, trying 3rd approach.
+
+	* .gitattributes: removed general file lookup '*' from include and lib
+	exclusions, we want to ignore all of the files under either or.
+
+
+10/31/2023 13:43 Sage I. Hendricks <sage.message@email.com>
+
+	Previous patch failed to fix the issue, testing an alternate option.
+	
+	* .gitattributes: fixed a spellin mistake and changed excultions to
+	assume that lib files are not in sub folders, while include files are
+	always in one layer of subfolder(s).
+
+
+10/31/2023 13:33 Sage I. Hendricks <sage.message@email.com>
+
+	Updated .gitattributes to block all files, recursively, that are
+	inside an include or lib folder.
+
+	* .gitattributes: updated include and lib folder exclusions to use
+	'**' for files rather than the previous '*'
+
+10/31/2023 12:01 Sage I. Hendricks <sage.message@email.com>
+
+	Added .gitattributes for eol and for ignoring include and lib paths.
+
+	* .gitattributes: new file, added custom definitions for various file
+	types.
+
+10/23/2023 14:25 Sage I. Hendricks <sage.message@email.com>
+
+	Replaced all "PROJECT NAME"s with Leaf C Project Template, and similarly
+	with "PROJECT VERSION"s.
+
+	* VERSION: updated first line, from template names to "Leaf C Project
+	Template 0.8.1.18-dev
+	* Makefile: Set PROJECT_NAME and PROJECT_VERSION to match the information
+	in the VERSION file
+	* README: updated the first 2 lines to show match the VERSION file.
+	Updated some the file explenations
+	* README.md: added area to display the versin, just under the main title.
+	Updated the title and description to explain that this is a template
+	Project. Set the first column of the Project Files chart to be left
+	aligned
+
+10/23/2023 14:32 Sage I. Hendricks <sage.message@email.com>
+
+	Added ignores to stop git from grabbing temporary files.
+
+	* .gitignore: added igores for .swp and .bak filetypes
+
+10/23/2023 13:58 Sage I. Hendricks <sage.message@email.com>
+
+	Moved the example source code into it's own directory.
+
+	* source/main.c: moved to source/example/main.c and had description
+	updated.
+	* source/example.c: moved to source/example/example.c
+	* source/example.h: moved to source/example/example.h
+	* Makefile: updated source locations for the example program
+
+10/23/2023 13:52 Sage I. Hendricks <sage.message@email.com>
+
+	created empty template source files.
+
+	* source/template/main.c: modified version of source/main.c to be used as
+	a starting point for a main program.
+	* source/template/template.c: an empty source file, templated to
+	work with a matching header file.
+	* source/template/template.h: an empty header file, templated to work with
+	the previously mentioned source/template/template.c source file.
+
+10/23/2023 13:42 Sage I. Hendricks <sage.message@email.com>
+
+	Added a version change script for the bash enviornment
+
+	* new-version.sh: wrote new file to update version in Makefile, README, 
+	README.md, and VERSION files.
+
+10/20/2023 11:27 Sage I. Hendricks <sage.message@email.com>
+
+    Added Basic Template for the GitHub cover page/readme
+
+    * README.md: Added basic templating information. A section for the
+    project's name and description, a section for building the program, a
+    section explaining files, and a section for the license.
+
+10/20/2023 10:56 Sage I. Hendricks <sage.message@email.com> 
+
+    Added basic instalation + build instruction for unix-like systems.
+
+    * INSTALL: Added lines for needed Dependencies, and instruction to build
+    and install the program using GNU Make and the provided Makefile.
+
+10/20/2023 10:48 Sage I. Hendricks <sage.message@email.com>
+
+    Git no longer ignores root folders named "install".
+
+    * .gitignore: removed the line "install/**", because such a
+    folder shouldn't exist. Secondly, on the windows platform the INSTALL file
+    makes having a folder named such impossible.
+
+10/20/2023 10:29 Sage I. Hendricks <sage.message@email.com>
+
+    Git should now grab the "Empty" directories.
+
+    * resources/.gitkeep: created an empty file to log directory
+    * source/include/.gitkeep: created an empty file to log directory
+    * source/lib/.gitkeep: created an empty file to log directory
+
+10/20/2023 10:11 Sage I. Hendricks <sage.message@email.com>
+
+    Clarified wording in the VERSION text
+
+    * VERSION: changed some wording in the "This is Free Software" line to
+    better express that it is with regards to the LICENSE.
+
+10/20/2023 09:55 Sage I. Hendricks <sage.message@email.com>
+
+    Clarified versioning scheme in the primary Makefile
+
+    * Makefile: Added comments detailing the recomended Version Scheme.
+    Comment insertion just below the "PROJECT_VERSION" variable.
+
+10/20/2023 09:40 Sage I. Hendricks <sage.message@email.com>
+
+    Setup the project to work with GitHub
+
+    * README: added description for GitHub's "README.md" file
+    * .gitignore: Doesn't grab build files
+    * .git/**: Git files created
+
+10/20/2023 08:52 Sage I. Hendricks <sage.message@email.com>
+
+    Converted Previous ChangeLog file to propper GNU Style
+
+    * ChangeLog: Updated formatting
+
+10/19/2023 16:06 Sage I. Hendricks <sage.message@email.com>
+
+    Program prints Hello World message at runtime.
+
+    * source/main.c (main): Call ex_hello_world function before exitting
+
+10/19/2023 15:57 Sage I. Hendricks <sage.message@email.com>
+
+    Wrote a basic Makefile to compile the example program
+
+    * Makefile (build, install, uninstall, clean): added basic instructions
+    needed to install simple programs
+
+10/19/2023 13:40 Sage I. Hendricks <sage.message@email.com>
+
+    Wrote basic hello world example program
+
+    * source/example.c (ex_hello_world): new function, prints "Hello, World"
+    to stdin.
+    * source/example.h (ex_hello_world): added function prototype in header
+    file for the function.
+    * source/main.c (main): added main funtion
+
+10/19/2023 10:21 Sage I. Hendricks <sage.message@email.com>
+
+    Created Simple Directory and File Structures
+
+    * ChangeLog: Created new file and logged changes
+    * LICENSE: applited the Apache Version 2 license
+    * README: wrote basic template GNU README file
+    * VERSION: wrote basic template VERSION file for "program --version" to
+    read from.
+

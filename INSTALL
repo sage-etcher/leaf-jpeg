@@ -1,0 +1,11 @@
+Program Dependencies:
+    none
+
+
+$ = at User Prompt
+# = at Root Prompt
+
+Unix-like systems, using GNU Make: (installs to /usr/local by default)
+    $ make build
+    # make install
+

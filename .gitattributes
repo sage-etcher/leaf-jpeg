@@ -1,0 +1,32 @@
+*           text=auto linguist-vendored
+
+*.md        text eol=lf
+
+Makefile*   text eol=lf
+*.c         text eol=lf linguist-vendored=false linguist-language=c
+*.h         text eol=lf linguist-vendored=false linguist-language=c
+*.cpp       text eol=lf linguist-vendored=false linguist-language=cpp
+*.hpp       text eol=lf linguist-vendored=false linguist-language=cpp
+*.dll       binary
+*.so        binary
+*.a         binary
+
+*.sh	    text eol=lf
+
+*.bat       text eol=crlf
+*.cmd       text eol=crlf
+*.ps1       text eol=crlf
+
+*.png       binary
+*.jpeg      binary
+*.jpg       binary 
+*.bmp       text eol=lf
+*.svg       text eol=lf
+
+README      text eol=lf
+INSTALL     text eol=lf
+VERSION     text eol=lf
+ChangeLog   text eol=lf
+
+source/include/*/*  linguist-vendored
+source/lib/*        linguist-vendored

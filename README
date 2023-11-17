@@ -1,0 +1,15 @@
+Leaf C Project Template
+0.9.4.29-rc1
+
+A project template for writing cleanly organized C programs.
+
+Installation instructions can be found in the top-level-file "INSTALL"
+
+VERSION      - Contains program's name, version, and licensing information
+README.md    - GitHub's Markdown ReadMe file
+Makefile     - GNU Makefile used to build and install the program
+resources/** - important files need for the installed program
+source/**    - Source files and libraries for the program
+
+Copying conditions can be found in the file, "LICENSE" 
+
