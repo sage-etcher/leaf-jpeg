@@ -1,6 +1,6 @@
 /*
-   source/example/example.h
-   An Example C header file. 
+   source/ljpeg_windows.h
+   LJPEG Window's specific operation header file.
  
    Copyright 2023 Sage I. Hendricks
 
@@ -21,11 +21,10 @@
 
 /* run once */
 #pragma once
-#ifndef __EXAMPLE_HEADER__
-#define __EXAMPLE_HEADER__
+#ifndef __LJPEG_WINDOWS_HEADER__
+#define __LJPEG_WINDOWS_HEADER__
 
 /* include headers */
-#include <stdio.h>
 
 
 /* custom datatypes */
@@ -38,7 +37,6 @@
 
 
 /* external function prototypes */
-void ex_hello_world (void);
 
 
 #endif /* end run once */

@@ -1,6 +1,6 @@
 /*
-   source/example/example.c
-   An Example C source file. 
+   source/ljpeg_posix.h
+   LJPEG POSIX's specific operations header file. 
  
    Copyright 2023 Sage I. Hendricks
 
@@ -19,25 +19,27 @@
 */
 
 
-#include "example.h"
+/* run once */
+#pragma once
+#ifndef __LJPEG_POSIX_HEADER__
+#define __LJPEG_POSIX_HEADER__
 
 /* include headers */
-#include <stdio.h>
 
 
-/* file static variables */
+/* custom datatypes */
 
 
-/* file static function prototypes */
+/* constants */
 
 
-/* function definitions */
-void
-ex_hello_world (void)
-{
-    printf ("Hello, World!\n");
-    return;
-}
+/* global variables */
+
+
+/* external function prototypes */
+
+
+#endif /* end run once */
 
 
 /* End of File */

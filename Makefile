@@ -17,8 +17,8 @@
 #  limitations under the License.
 #
 
-PROJECT_NAME := Leaf C Project Template
-PROJECT_VERSION := 0.9.4.29-rc1
+PROJECT_NAME := Leaf JPEG
+PROJECT_VERSION := 0.2.0.1-dev
 # VERSION in the form MAJOR.MINOR.PATCH.BUILD-AUDIENCE
 # Example for Developer Build, version 2.14 patch 3
 # 2.14.3.841-dev
@@ -36,33 +36,65 @@ LIBRARY_DIR := $(SOURCE_DIR)/lib
 
 
 # Important Files
-EXAMPLE_EXEC := example.exe
-EXAMPLE_SOURCE_FILENAMES := example/main.c example/example.c
-EXAMPLE_SOURCE_FILES := $(foreach filename,$(EXAMPLE_SOURCE_FILENAMES),$(SOURCE_DIR)/$(filename))
-EXAMPLE_OBJECT_FILES := $(foreach filename,$(EXAMPLE_SOURCE_FILES),$(BUILD_DIR)/$(filename).o)
+#EXAMPLE_EXEC := example.exe
+#EXAMPLE_SOURCE_FILENAMES := example/main.c example/example.c
+#EXAMPLE_SOURCE_FILES := $(foreach filename,$(EXAMPLE_SOURCE_FILENAMES),$(SOURCE_DIR)/$(filename))
+#EXAMPLE_OBJECT_FILES := $(foreach filename,$(EXAMPLE_SOURCE_FILES),$(BUILD_DIR)/$(filename).o)
 
+LJPEG_EXEC := ljpeg.exe
+LJPEG_SOURCE_FILENAMES := ljpeg.c
+LJPEG_SOURCE_FILES := $(foreach filename,$(LJPEG_SOURCE_FILENAMES),$(SOURCE_DIR)/$(filename))
+LJPEG_OBJECT_FILES := $(foreach filename,$(LJPEG_SOURCE_FILES),$(BUILD_DIR)/$(filename).o)
+
+DRAFT_EXEC := draft-ljpeg.exe
+DRAFT_SOURCE_FILENAMES := draft/ljpeg-draft.c
+DRAFT_SOURCE_FILES := $(foreach filename,$(DRAFT_SOURCE_FILENAMES),$(SOURCE_DIR)/$(filename))
+DRAFT_OBJECT_FILES := $(foreach filename,$(DRAFT_SOURCE_FILES),$(BUILD_DIR)/$(filename).o)
+DRAFT_L_FLAGS := -IC:/msys64/clang64/include/SDL2 -Dmain=SDL_main -lmingw32 -mwindows -lSDL2main -lSDL2 -IC:/msys64/clang64/include/SDL2 -Dmain=SDL_main -IC:/msys64/clang64/include/webp -DLIBDEFLATE_DLL -DHWY_SHARED_DEFINE -IC:/msys64/clang64/include/libpng16 -lSDL2_image -lmingw32 -mwindows -lSDL2main -lSDL2
 
 # Compiler and Linker Options
-CC := gcc
-LD := gcc
+CC := clang
+LD := clang
 
 INCLUDE_FLAGS := -I$(INCLUDE_DIR) -I$(SOURCE_DIR)
 LIBRARY_FLAGS := -L$(LIBRARY_DIR)
 
-C_FLAGS := $(INCLUDE_FLAGS) -O3 -ansi -pedantic -Wpedantic -Wall -Werror
-LINKER_FLAGS := $(LIBRARY_FLAGS)
+C_FLAGS := $(INCLUDE_FLAGS) 
+#C_FLAGS += -O3 
+C_FLAGS += -O0 
+#C_FLAGS += -ansi 
+C_FLAGS += -std=c99
+C_FLAGS += -pedantic -Wpedantic 
+C_FLAGS += -Wall 
+C_FLAGS += -Werror
+C_FLAGS += `pkgconf --cflags SDL2`
+
+L_FLAGS := $(LIBRARY_FLAGS)
+L_FLAGS := `pkgconf --libs SDL2`
 
 
 # Build
 .PHONY: build
-build: $(BUILD_DIR)/$(EXAMPLE_EXEC)
+build: $(BUILD_DIR)/$(LJPEG_EXEC)
+#build: $(BUILD_DIR)/$(LJPEG_EXEC) $(BUILD_DIR)/draft/$(DRAFT_EXEC)
+.PHONY: draft-build
+draft-build: $(BUILD_DIR)/draft/$(DRAFT_EXEC)
 
-$(BUILD_DIR)/$(EXAMPLE_EXEC): $(EXAMPLE_OBJECT_FILES)
+# LJPEG main 
+$(BUILD_DIR)/$(LJPEG_EXEC): $(LJPEG_OBJECT_FILES)
 	mkdir -pv $(dir $@)
-	$(LD) -o $@ $(LINKER_FLAGS) $(EXAMPLE_SOURCE_FILES)
-
+	$(LD) -o $@ $(L_FLAGS) $(LJPEG_OBJECT_FILES)
 
 $(BUILD_DIR)/$(SOURCE_DIR)/%.c.o: $(SOURCE_DIR)/%.c
+	mkdir -pv $(dir $@)
+	$(CC) -c -o $@ $(C_FLAGS) $<
+
+# Draft
+$(BUILD_DIR)/draft/$(DRAFT_EXEC): $(DRAFT_OBJECT_FILES)
+	mkdir -pv $(dir $@)
+	$(LD) -o $@ $(L_FLAGS) $(DRAFT_L_FLAGS) $(DRAFT_OBJECT_FILES)
+
+$(BUILD_DIR)/$(SOURCE_DIR)/draft/%.c.o: $(SOURCE_DIR)/draft/%.c
 	mkdir -pv $(dir $@)
 	$(CC) -c -o $@ $(C_FLAGS) $<
 
@@ -75,10 +107,10 @@ clean:
 
 # Install
 .PHONY: install
-install: $(DESTDIR)/bin/$(EXAMPLE_EXEC)
+install: $(DESTDIR)/bin/$(LJPEG_EXEC)
 
 
-$(DESTDIR)/bin/$(EXAMPLE_EXEC): $(BUILD_DIR)/$(EXAMPLE_EXEC)
+$(DESTDIR)/bin/$(LJPEG_EXEC): $(BUILD_DIR)/$(LJPEG_EXEC)
 	mkdir -pv $(dir $@)
 	cp -fv $< $@
 
@@ -86,6 +118,6 @@ $(DESTDIR)/bin/$(EXAMPLE_EXEC): $(BUILD_DIR)/$(EXAMPLE_EXEC)
 # Uninstall
 .PHONY: uninstall
 uninstall:
-	rm -fv $(DESTDIR)/bin/$(EXAMPLE_EXEC)
+	rm -fv $(DESTDIR)/bin/$(LJPEG_EXEC)
 
 
