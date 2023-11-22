@@ -1,5 +1,13 @@
-Program Dependencies:
-    none
+Build Dependencies
+- bash
+- gnu-make
+- libsdl2-devel
+- libsdl2_image-devel
+- pkgconf
+
+Runtime Dependencies
+- libsdl2
+- libsdl2_image
 
 
 $ = at User Prompt
