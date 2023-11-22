@@ -84,7 +84,7 @@ main (int argc, char *argv[])
     /* set the background color for transparent images */
     /* 255 255 255 == White */
     /*   0   0   0 == Black */
-    SDL_SetRenderDrawColor (g_rend, 255, 255, 255, SDL_ALPHA_OPAQUE);
+    SDL_SetRenderDrawColor (g_rend, BACKGROUND_RED, BACKGROUND_GREEN, BACKGROUND_BLUE, SDL_ALPHA_OPAQUE);
 
     /* initial draw */
     SDL_RenderClear (g_rend);
@@ -169,20 +169,20 @@ key_event (SDL_Event *evt)
     {
         /* Ctrl 1 or Alt 1 */
         /* scale to half size */
-        g_img.scale = 0.5;
+        g_img.scale = SCALE_PRESET_1;
     }
     else if (((e.key.keysym.sym == '2') && ((e.key.keysym.mod & (KMOD_CTRL | KMOD_ALT)) != 0)) ||
              ((e.key.keysym.sym == '0') && ((e.key.keysym.mod & KMOD_CTRL) != 0) && ((e.key.keysym.mod & KMOD_ALT) != 0)))
     {
         /* Ctrl 2 or Alt 2 or Ctrl Alt 0 */
         /* scale to original size */
-        g_img.scale = 1.0;
+        g_img.scale = SCALE_PRESET_2;
     }
     else if ((e.key.keysym.sym == '3') && ((e.key.keysym.mod & (KMOD_CTRL | KMOD_ALT)) != 0))
     {
         /* Ctrl 3 or Alt 3 */
         /* scale to 2x size */
-        g_img.scale = 2.0;
+        g_img.scale = SCALE_PRESET_3;
     }
     else if ((e.key.keysym.sym == '=') && ((e.key.keysym.mod & KMOD_CTRL) != 0))
     {
@@ -251,17 +251,17 @@ mouse_wheel_event (SDL_Event *evt)
 {
     SDL_Event e = *evt;
 
-    if (e.wheel.y >= 1)
+    if (e.wheel.y > 0)
     {
         /* Scroll Wheel forward */
         /* increase scale by 10% */
-        g_img.scale *= 1.10;
+        g_img.scale *= SCROLL_MULTDIV;
     }
-    else if (e.wheel.y <= -1)
+    else if (e.wheel.y < 0)
     {
         /* Scroll Wheel backward */
         /* decrease scale by 10% */
-        g_img.scale /= 1.10;
+        g_img.scale /= SCROLL_MULTDIV;
     }
 }
 

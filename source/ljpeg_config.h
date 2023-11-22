@@ -32,6 +32,50 @@ But is EXTREMELY GPU intensive and is NOT recomended for low spec systems
 /* #define RELOAD_WINDOW_ON_MOVE */
 
 
+/*
+Background color in RGB (0-255 or 0x00-0xFF)
+Default: 0xFF 0xFF 0xFF (WHITE)
+*/
+#define BACKGROUND_RED   0xFF
+#define BACKGROUND_GREEN 0xFF
+#define BACKGROUND_BLUE  0xFF
+
+
+/*
+Initial Image scale
+Default: 100%
+*/
+#define INITIAL_SCALE 1.0
+
+
+/*
+Mouse scroll wheel multiplier/divisor
+Default: 10%
+*/
+#define SCROLL_MULTDIV 1.10
+
+
+/* 
+scale preset #1 (ctrl 1)
+Default: 50%
+*/
+#define SCALE_PRESET_1 0.5
+
+
+/* 
+scale preset #2 (ctrl 2)
+Default: 100%
+*/
+#define SCALE_PRESET_2 1.0
+
+
+/* 
+scale preset #3 (ctrl 3)
+Default: 200%
+*/
+#define SCALE_PRESET_3 2.0
+
+
 #endif /* end run once */
 
 

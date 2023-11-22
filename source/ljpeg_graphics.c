@@ -148,7 +148,7 @@ graphics_load_texture (const char *filename)
     g_img.source.y = 0;
 
     /* set default rotation and scale */
-    g_img.scale    = 1.0;
+    g_img.scale    = INITIAL_SCALE;
     g_img.rotation = 0;
 
     /* project the texture onto projection */
