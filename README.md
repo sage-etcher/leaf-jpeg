@@ -1,6 +1,6 @@
 # Leaf JPEG
 
-___version:___ 0.4.0.5-dev
+___version:___ 0.4.1.6-dev
 
 A cross-platform [VJPEG](http://stereopsis.com/vjpeg/) clone, with added scroll-wheel scaling and hardware acceleration.
 

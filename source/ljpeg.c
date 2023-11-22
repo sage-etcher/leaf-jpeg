@@ -204,14 +204,14 @@ key_event (SDL_Event *evt)
     /* SHIFT+'r' */
     else if ((e.key.keysym.sym == 'r') && ((e.key.keysym.mod & KMOD_SHIFT) != 0))
     {
-        /* rotate image clockwise by 90 degrees */
-        graphics_texture_rotate (&g_img, CLOCKWISE);
+        /* rotate image counter-clockwise by 90 degrees */
+        graphics_texture_rotate (&g_img, COUNTERCLOCKWISE);
     }
     /* 'r' */
     else if (e.key.keysym.sym == 'r')
     {
-        /* rotate image counter-clockwise by 90 degrees */
-        graphics_texture_rotate (&g_img, COUNTERCLOCKWISE);
+        /* rotate image clockwise by 90 degrees */
+        graphics_texture_rotate (&g_img, CLOCKWISE);
     }
     else if (e.key.keysym.sym == SDLK_RIGHT)
     {
