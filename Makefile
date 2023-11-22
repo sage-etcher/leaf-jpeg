@@ -18,7 +18,7 @@
 #
 
 PROJECT_NAME := Leaf JPEG
-PROJECT_VERSION := 0.2.0.1-dev
+PROJECT_VERSION := 0.3.0.2-dev
 # VERSION in the form MAJOR.MINOR.PATCH.BUILD-AUDIENCE
 # Example for Developer Build, version 2.14 patch 3
 # 2.14.3.841-dev
@@ -42,7 +42,7 @@ LIBRARY_DIR := $(SOURCE_DIR)/lib
 #EXAMPLE_OBJECT_FILES := $(foreach filename,$(EXAMPLE_SOURCE_FILES),$(BUILD_DIR)/$(filename).o)
 
 LJPEG_EXEC := ljpeg.exe
-LJPEG_SOURCE_FILENAMES := ljpeg.c
+LJPEG_SOURCE_FILENAMES := ljpeg.c graphics.c
 LJPEG_SOURCE_FILES := $(foreach filename,$(LJPEG_SOURCE_FILENAMES),$(SOURCE_DIR)/$(filename))
 LJPEG_OBJECT_FILES := $(foreach filename,$(LJPEG_SOURCE_FILES),$(BUILD_DIR)/$(filename).o)
 
@@ -66,11 +66,13 @@ C_FLAGS += -O0
 C_FLAGS += -std=c99
 C_FLAGS += -pedantic -Wpedantic 
 C_FLAGS += -Wall 
+C_FLAGS += -Wno-unused-label
+C_FLAGS += -Wno-unused-function
 C_FLAGS += -Werror
-C_FLAGS += `pkgconf --cflags SDL2`
+C_FLAGS += `pkgconf --cflags SDL2 SDL2_image` 
 
 L_FLAGS := $(LIBRARY_FLAGS)
-L_FLAGS := `pkgconf --libs SDL2`
+L_FLAGS := `pkgconf --libs SDL2 SDL2_image`
 
 
 # Build
