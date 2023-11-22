@@ -27,9 +27,14 @@ PROJECT_VERSION := 0.4.1.6-dev
 
 
 # Important Directories
-BUILD_DIR  := ./build
-SOURCE_DIR := ./source
-DESTDIR    := /usr/local
+PROJ_DIR      := .
+BUILD_DIR     := $(PROJ_DIR)/build
+SOURCE_DIR    := $(PROJ_DIR)/source
+RESOURCES_DIR := $(PROJ_DIR)/resources
+DESTDIR       := /usr/local
+#DESTDIR       := ./installrootdir
+BINDIR        := $(DESTDIR)/bin
+ETCDIR        := $(DESTDIR)/etc/ljpeg
 
 INCLUDE_DIR := $(SOURCE_DIR)/include
 LIBRARY_DIR := $(SOURCE_DIR)/lib
@@ -109,17 +114,21 @@ clean:
 
 # Install
 .PHONY: install
-install: $(DESTDIR)/bin/$(LJPEG_EXEC)
+install: $(BINDIR)/$(LJPEG_EXEC) installresources
 
 
-$(DESTDIR)/bin/$(LJPEG_EXEC): $(BUILD_DIR)/$(LJPEG_EXEC)
+$(BINDIR)/$(LJPEG_EXEC): $(BUILD_DIR)/$(LJPEG_EXEC)
 	mkdir -pv $(dir $@)
 	cp -fv $< $@
 
+installresources:
+	mkdir -pv $(ETCDIR)
+	cp -fr $(RESOURCES_DIR)/* $(ETCDIR)/
 
 # Uninstall
 .PHONY: uninstall
 uninstall:
-	rm -fv $(DESTDIR)/bin/$(LJPEG_EXEC)
+	rm -fv $(BINDIR)/$(LJPEG_EXEC)
+	rm -rfv $(ETCDIR)
 
 
