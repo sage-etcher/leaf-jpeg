@@ -54,6 +54,7 @@ $ make build
 |:-----|-----------|
 | VERSION | Contains program's name, version, and licensing information |
 | Makefile | GNU Makefile used to build and install the program |
+| source/draft/\* | Draft build of the program (quick test) |
 | source/ljpeg.c | Program entry point/main source file |
 | source/ljpeg\_config.h | Compile time configuration file |
 | source/ljpeg\_graphics.\* | Graphical operation wrapper |
