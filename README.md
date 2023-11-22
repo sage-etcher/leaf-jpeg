@@ -12,11 +12,6 @@ A cross-platform [VJPEG](http://stereopsis.com/vjpeg/) clone, with added scroll-
 `Scroll Wheel`: scale up/down  
 `Escape`: quit  
 `a`: reset scale & rotation  
-[//]: # ( no arrow support yet )
-[//]: # (
-`Right Arrow` or `r`: rotate clockwise  
-`Left Arrow` or `Shift r`: rotate counter-clockwise  
-)
 `r`: rotate clockwise  
 `Shift r`: rotate counter-clockwise  
 `Ctrl 1` or `Alt 1`: 50% scale  
