@@ -19,7 +19,7 @@ A cross-platform [VJPEG](http://stereopsis.com/vjpeg/) clone, with added scroll-
 `Ctrl 3` or `Alt 3`: 200% scale  
 `Ctrl Alt 0`: 100% scale  
 `Ctrl +` or `Ctrl =`: next bigger size  
-`Ctrl -` or `Ctrl \_`: next smaller size  
+`Ctrl -` or `Ctrl _`: next smaller size  
 
 
 
