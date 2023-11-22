@@ -21,7 +21,7 @@ else
 fi
 
 # get dependency list
-./get-deps $EXEC_FILE > $DEP_FILE
+./get-deps.sh $EXEC_FILE > $DEP_FILE
 
 # find and copy dependencies
 while read p; do
