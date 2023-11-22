@@ -22,7 +22,8 @@
 /* include headers */
 #include <stdio.h>
 
-#include "graphics.h"
+#include "ljpeg_graphics.h"
+#include "ljpeg_config.h"
 
 
 /* file static variables */
@@ -85,7 +86,7 @@ main (int argc, char *argv[])
     /*   0   0   0 == Black */
     SDL_SetRenderDrawColor (g_rend, 255, 255, 255, SDL_ALPHA_OPAQUE);
     
-    /* initial draw */ 
+    /* initial draw */
     SDL_RenderClear (g_rend);
     graphics_render (g_rend, &g_img);
     SDL_RenderPresent (g_rend);

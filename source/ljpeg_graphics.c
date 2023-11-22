@@ -19,13 +19,16 @@
 */
 
 
-#include "graphics.h"
+#include "ljpeg_graphics.h"
 
 /* include headers */
 #include <stdio.h>
+#include <stdbool.h>
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 #include <math.h>
+
+#include "ljpeg_config.h"
 
 
 /* global variable declarations */
@@ -216,11 +219,11 @@ graphics_manual_move_window (void)
         /* update the window position */
         SDL_SetWindowPosition (g_win, window_x, window_y);
 
-        /* update the window display 
+        #ifdef RELOAD_WINDOW_ON_MOVE
+        /* update the window display as the window is moved
         this is verry gpu intensive, and on low spec systems is NOT recomended */
-        SDL_RenderClear (g_rend);
-        graphics_render (g_rend, &g_img);
         SDL_RenderPresent (g_rend);
+        #endif
 
         /* save the mouse coordinates for next iteration */
         mouse_x_prev = mouse_x;

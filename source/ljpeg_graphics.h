@@ -21,8 +21,8 @@
 
 /* run once */
 #pragma once
-#ifndef __GRAPHICS_HEADER__
-#define __GRAPHICS_HEADER__
+#ifndef __LJPEG_GRAPHICS_HEADER__
+#define __LJPEG_GRAPHICS_HEADER__
 
 /* include headers */
 #include <stdio.h>
@@ -30,6 +30,8 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 #include <math.h>
+
+#include "ljpeg_config.h"
 
 
 /* custom datatypes */
