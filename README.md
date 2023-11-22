@@ -2,7 +2,7 @@
 
 ___version:___ 0.3.1.4-dev
 
-A generic template for making cleanly organized C projects; lightly inspired by the GNU Coding Standards and various other resources.
+A cross-platform [VJPEG](http://stereopsis.com/vjpeg/) clone, with added scroll-wheel scaling and hardware acceleration.
 
 
 ## Building the Program using GNU Make
@@ -18,10 +18,9 @@ $ make build
 |:-----|-----------|
 | VERSION | Contains program's name, version, and licensing information |
 | Makefile | GNU Makefile used to build and install the program |
-| source/example/\* | Hello World Example program sources |
-| source/template/main.c | Template main source file |
-| source/template/template.c | Template source file |
-| source/tempalte/template.h | Template header file |
+| source/ljpeg.c | Program entry point/main source file |
+| source/ljpeg\_config.h | Compile time configuration file |
+| source/ljpeg\_graphics.\* | Graphical operation wrapper |
 
 
 ## License
