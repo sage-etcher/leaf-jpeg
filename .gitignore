@@ -4,3 +4,4 @@ build/**
 **.swp
 **.bak
 /**.sh
+/dependencies
