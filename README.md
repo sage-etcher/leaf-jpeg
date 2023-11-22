@@ -10,13 +10,16 @@ A cross-platform [VJPEG](http://stereopsis.com/vjpeg/) clone, with added scroll-
 `Right click`: quit  
 `Double Right click`: view image 1:1 scale  
 `Scroll Wheel`: scale up/down  
+
 `Escape`: quit  
 `a`: reset scale & rotation  
-`r` or `Right Arrow`: rotate clockwise  
-`Shift r` or `Left Arrow`: rotate counter-clockwise  
+`Right Arrow` or `r`:rotate clockwise  
+`Left Arrow` or `Shift r`: rotate counter-clockwise  
+
 `Ctrl 1` or `Alt 1`: 50% scale  
 `Ctrl 2` or `Alt 2`: 100% scale   
 `Ctrl 3` or `Alt 3`: 200% scale  
+
 `Ctrl Alt 0`: 100% scale  
 `Ctrl +` or `Ctrl =`: next bigger size  
 `Ctrl -` or `Ctrl _`: next smaller size  
