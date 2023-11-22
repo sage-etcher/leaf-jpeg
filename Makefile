@@ -18,7 +18,7 @@
 #
 
 PROJECT_NAME := Leaf JPEG
-PROJECT_VERSION := 0.3.1.4-dev
+PROJECT_VERSION := 0.4.0.5-dev
 # VERSION in the form MAJOR.MINOR.PATCH.BUILD-AUDIENCE
 # Example for Developer Build, version 2.14 patch 3
 # 2.14.3.841-dev

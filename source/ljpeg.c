@@ -213,6 +213,17 @@ key_event (SDL_Event *evt)
         /* rotate image counter-clockwise by 90 degrees */
         graphics_texture_rotate (&g_img, COUNTERCLOCKWISE);
     }
+    else if (e.key.keysym.sym == SDLK_RIGHT)
+    {
+        /* rotate image clockwise by 90 degrees */
+        graphics_texture_rotate (&g_img, CLOCKWISE);
+    }
+    /* Left Arrow */
+    else if (e.key.keysym.sym == SDLK_LEFT)
+    {
+        /* rotate image counter-clockwise by 90 degrees */
+        graphics_texture_rotate (&g_img, COUNTERCLOCKWISE);
+    }
     /* 'a' */
     else if (e.key.keysym.sym == 'a')
     {

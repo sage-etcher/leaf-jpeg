@@ -1,6 +1,6 @@
 # Leaf JPEG
 
-___version:___ 0.3.1.4-dev
+___version:___ 0.4.0.5-dev
 
 A cross-platform [VJPEG](http://stereopsis.com/vjpeg/) clone, with added scroll-wheel scaling and hardware acceleration.
 
@@ -12,8 +12,8 @@ A cross-platform [VJPEG](http://stereopsis.com/vjpeg/) clone, with added scroll-
 `Scroll Wheel`: scale up/down  
 `Escape`: quit  
 `a`: reset scale & rotation  
-`r`: rotate clockwise  
-`Shift r`: rotate counter-clockwise  
+`r` or `Right Arrow`: rotate clockwise  
+`Shift r` or `Left Arrow`: rotate counter-clockwise  
 `Ctrl 1` or `Alt 1`: 50% scale  
 `Ctrl 2` or `Alt 2`: 100% scale   
 `Ctrl 3` or `Alt 3`: 200% scale  
