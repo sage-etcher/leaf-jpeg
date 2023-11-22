@@ -1,5 +1,5 @@
 /*
-   source/graphics.h
+   source/ljpeg_graphics.h
    LJPEG SDL Graphics header. 
  
    Copyright 2023 Sage I. Hendricks

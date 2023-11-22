@@ -1,5 +1,5 @@
 /*
-   source/graphics.c
+   source/ljpeg_graphics.c
    LJPEG SDL Graphics source code. 
  
    Copyright 2023 Sage I. Hendricks

@@ -1,5 +1,5 @@
 /*
-   source/config.h
+   source/ljpeg_config.h
    LJPEG configuration file. 
  
    Copyright 2023 Sage I. Hendricks
