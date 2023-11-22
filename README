@@ -1,15 +1,16 @@
 Leaf JPEG
 0.4.1.6-dev
 
-A project template for writing cleanly organized C programs.
+A cross-platform VJPEG clone, with added scroll-wheel scaling and hardware 
+acceleration.
 
-Installation instructions can be found in the top-level-file "INSTALL"
-
-VERSION      - Contains program's name, version, and licensing information
-README.md    - GitHub's Markdown ReadMe file
-Makefile     - GNU Makefile used to build and install the program
-resources/** - important files need for the installed program
-source/**    - Source files and libraries for the program
+VERSION                  Contains program's name, version, and licensing
+Makefile                 GNU Makefile used to build and install the program
+source/draft/*           Draft build of the program (quick test)
+source/ljpeg.c           Program entry point/main source file
+source/ljpeg_config.h    Compile time configuration file
+source/ljpeg_graphics.*  Graphical operation wrapper
+resources/hotkeys.txt    Hotkey reference for LJPEG Controls
 
 Copying conditions can be found in the file, "LICENSE" 
 
