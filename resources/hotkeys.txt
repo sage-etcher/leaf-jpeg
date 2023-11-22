@@ -1,0 +1,17 @@
+Left click (drag)       move  
+Right click             quit  
+Right (double) click    view image 1:1 scale  
+Scroll Wheel            scale up/down  
+
+Escape                  quit  
+'a'                     reset scale & rotation  
+Right Arrow / 'r'       rotate clockwise  
+Left Arrow / 'R'        rotate counter-clockwise  
+
+Ctrl '1' / Alt '1'      50% scale  
+Ctrl '2' / Alt '2'      100% scale   
+Ctrl '3' / Alt '3'      200% scale  
+
+Ctrl Alt '0'            100% scale  
+Ctrl '+' / Ctrl '='     next bigger size  
+Ctrl '-' / Ctrl '_'     next smaller size  

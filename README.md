@@ -28,6 +28,21 @@ A cross-platform [VJPEG](http://stereopsis.com/vjpeg/) clone, with added scroll-
 
 ## Building the Program using GNU Make
 
+>
+> ### Build Dependencies
+> 
+> - bash
+> - gnu-make
+> - libsdl2-devel
+> - libsdl2\_image-devel
+> - pkgconf
+>
+> ### Runtime Dependencies
+>
+> - libsdl2
+> - libsdl2\_image
+> 
+
 ```
 $ make build
 # make install
