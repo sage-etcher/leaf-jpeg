@@ -4,6 +4,29 @@ ___version:___ 0.3.1.4-dev
 
 A cross-platform [VJPEG](http://stereopsis.com/vjpeg/) clone, with added scroll-wheel scaling and hardware acceleration.
 
+### Shortcuts
+
+`Left click (drag)`: move  
+`Right click`: quit  
+`Double Right click`: view image 1:1 scale  
+`Scroll Wheel`: scale up/down  
+`Escape`: quit  
+`a`: reset scale & rotation  
+[//]: # ( no arrow support yet )
+[//]: # (
+`Right Arrow` or `r`: rotate clockwise  
+`Left Arrow` or `Shift r`: rotate counter-clockwise  
+)
+`r`: rotate clockwise  
+`Shift r`: rotate counter-clockwise  
+`Ctrl 1` or `Alt 1`: 50% scale  
+`Ctrl 2` or `Alt 2`: 100% scale   
+`Ctrl 3` or `Alt 3`: 200% scale  
+`Ctrl Alt 0`: 100% scale  
+`Ctrl +` or `Ctrl =`: next bigger size  
+`Ctrl -` or `Ctrl \_`: next smaller size  
+
+
 
 ## Building the Program using GNU Make
 
