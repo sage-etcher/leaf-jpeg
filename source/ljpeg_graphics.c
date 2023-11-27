@@ -209,6 +209,7 @@ graphics_manual_move_window (void)
     /* while the left mouse button is held down */ 
     while (mouse_button_state & SDL_BUTTON (SDL_BUTTON_LEFT))
     {
+	SDL_PumpEvents ();
         /* get the current mouse state */
         mouse_button_state = SDL_GetGlobalMouseState (&mouse_x, &mouse_y);
         /* get the current window position */

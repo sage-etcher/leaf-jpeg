@@ -18,7 +18,7 @@
 #
 
 PROJECT_NAME := Leaf JPEG
-PROJECT_VERSION := 0.5.0.7-rc1
+PROJECT_VERSION := 0.5.1.8-rc2
 # VERSION in the form MAJOR.MINOR.PATCH.BUILD-AUDIENCE
 # Example for Developer Build, version 2.14 patch 3
 # 2.14.3.841-dev
@@ -73,11 +73,11 @@ C_FLAGS += -Wall
 C_FLAGS += -Wno-unused-label
 C_FLAGS += -Wno-unused-function
 C_FLAGS += -Werror
-C_FLAGS += `pkgconf --cflags SDL2 SDL2_image` 
+C_FLAGS += `pkgconf --cflags sdl2 SDL2_image` 
 
 L_FLAGS := $(LIBRARY_FLAGS)
 L_FLAGS += -lm
-L_FLAGS += `pkgconf --libs SDL2 SDL2_image`
+L_FLAGS += `pkgconf --libs sdl2 SDL2_image`
 
 
 # Build
