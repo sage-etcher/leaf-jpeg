@@ -33,6 +33,7 @@ SOURCE_DIR    := $(PROJ_DIR)/source
 RESOURCES_DIR := $(PROJ_DIR)/resources
 DESTDIR       := /usr/local
 #DESTDIR       := ./installrootdir
+#DESTDIR       := /usr/pkg/ljpeg/$(PROJECT_VERSION)
 BINDIR        := $(DESTDIR)/bin
 ETCDIR        := $(DESTDIR)/etc/ljpeg
 
@@ -64,8 +65,8 @@ INCLUDE_FLAGS := -I$(INCLUDE_DIR) -I$(SOURCE_DIR)
 LIBRARY_FLAGS := -L$(LIBRARY_DIR)
 
 C_FLAGS := $(INCLUDE_FLAGS) 
-C_FLAGS += -O3 
-#C_FLAGS += -O0 
+#C_FLAGS += -O3 
+C_FLAGS += -O0 -g
 #C_FLAGS += -ansi 
 C_FLAGS += -std=c99
 C_FLAGS += -pedantic -Wpedantic 
