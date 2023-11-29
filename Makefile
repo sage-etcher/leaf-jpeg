@@ -72,9 +72,9 @@ C_FLAGS += -std=c99
 C_FLAGS += -pedantic -Wpedantic 
 C_FLAGS += -Wall 
 C_FLAGS += -Wno-unused-label
-C_FLAGS += -Wno-unused-function
-C_FLAGS += -Werror
-C_FLAGS += `pkgconf --cflags sdl2 SDL2_image` 
+#C_FLAGS += -Wno-unused-function
+#C_FLAGS += -Werror
+C_FLAGS += `pkgconf --cflags sdl2 SDL2_image`
 
 L_FLAGS := $(LIBRARY_FLAGS)
 L_FLAGS += -lm

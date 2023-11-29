@@ -42,15 +42,16 @@ texture       g_img;
 
 /* file static function prototypes */
 static double deg2rad (double deg);
-static double rad2deg (double rad);
+/* static double rad2deg (double rad); */
 static void log_sdl_error (const char *string_template);
 
 /* static function definitions */
+/* 
 static double 
 rad2deg (double rad)
-{
-    return ((rad/M_PI) * 180);
+{ return ((rad/M_PI) * 180);
 }
+*/
 
 static double 
 deg2rad (double deg)
@@ -77,7 +78,7 @@ graphics_init_sdl (void)
         goto graphics_init_sdl_failure_0;
     }
 
-graphics_init_sdl_success_0:
+/* graphics_init_sdl_success_0: */
     return EXIT_SUCCESS;
 
 graphics_init_sdl_failure_0:
@@ -111,7 +112,7 @@ graphics_init_window (void)
     }
 
 
-graphics_init_window_success_0:
+/* graphics_init_window_success_0: */
     return EXIT_SUCCESS;
 
 graphics_init_window_failure_1:
@@ -155,7 +156,7 @@ graphics_load_texture (const char *filename)
     graphics_project (&g_img);
 
  
-graphics_load_texture_success_0:
+/* graphics_load_texture_success_0: */
     return EXIT_SUCCESS; 
     
 graphics_load_texture_failure_1:

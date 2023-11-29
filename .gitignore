@@ -5,3 +5,5 @@ build/**
 **.bak
 /**.sh
 /dependencies
+/compile_commands.json
+.cache/**

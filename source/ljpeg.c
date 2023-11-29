@@ -124,7 +124,7 @@ main (int argc, char *argv[])
 
 
     /* exit routines */
-main_exit_4:
+/* main_exit_4: */
     SDL_RWclose (g_img.rwop);
     SDL_DestroyTexture (g_img.texture);
 main_exit_3:
