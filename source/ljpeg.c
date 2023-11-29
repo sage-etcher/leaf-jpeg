@@ -63,19 +63,15 @@ main (int argc, char *argv[])
     /* initialize required SDL elements */
     exit_code = graphics_init_sdl ();
     if (exit_code != EXIT_SUCCESS)
-    {
         goto main_exit_1;
-    }
+
     exit_code = graphics_init_window ();
     if (exit_code != EXIT_SUCCESS)
-    {
         goto main_exit_2;
-    }
+
     exit_code = graphics_load_texture (image_path);
     if (exit_code != EXIT_SUCCESS)
-    {
         goto main_exit_3;
-    }
 
     /* set the window size and display the window */
     SDL_SetWindowSize (g_win, (int)g_img.source.w, (int)g_img.source.h);
